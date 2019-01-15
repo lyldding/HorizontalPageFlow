@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 /**
  * 每页显示瀑布流布局
  *
- * @author lyldding
+ * @author https://github.com/lyldding/HorizontalPageFlow
  */
 public class HorizontalPageFlowLayoutManager extends RecyclerView.LayoutManager {
     private static final String TAG = "HorizontalPageFlowLayou";

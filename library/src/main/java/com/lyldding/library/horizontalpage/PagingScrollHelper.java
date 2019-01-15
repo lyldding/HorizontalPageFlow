@@ -287,6 +287,26 @@ public class PagingScrollHelper {
         return p;
     }
 
+    public void showNextPage() {
+        startY = offsetY;
+        startX = offsetX;
+        if (mOrientation == ORIENTATION.VERTICAL) {
+            mOnFlingListener.onFling(0, 1);
+        } else {
+            mOnFlingListener.onFling(1, 0);
+        }
+    }
+
+    public void showPrePage() {
+        startY = offsetY;
+        startX = offsetX;
+        if (mOrientation == ORIENTATION.VERTICAL) {
+            mOnFlingListener.onFling(0, -1);
+        } else {
+            mOnFlingListener.onFling(-1, 0);
+        }
+    }
+
     private onPageChangeListener mOnPageChangeListener;
 
     public void setOnPageChangeListener(onPageChangeListener listener) {
