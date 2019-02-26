@@ -167,7 +167,7 @@ public class HorizontalPageFlowLayoutManager extends RecyclerView.LayoutManager 
         if (rect == null) {
             rect = new Rect();
         }
-        int x = pageSize * getUsableWidth() + itemWidthUsed;
+        int x = pageSize * getWidth() + itemWidthUsed;
         int y = itemHeightUsed;
         rect.set(x, y, childWidth + x, childHeight + y);
         allItemFrames.put(index, rect);
