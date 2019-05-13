@@ -50,7 +50,7 @@ allprojects {
  }
   
    dependencies {
-         implementation 'com.github.lyldding:HorizontalPageFlow:1.0.1'
+         implementation 'com.github.lyldding:HorizontalPageFlow:latest'
  }
 ```
 
