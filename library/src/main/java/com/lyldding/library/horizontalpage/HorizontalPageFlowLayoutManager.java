@@ -144,15 +144,17 @@ public class HorizontalPageFlowLayoutManager extends RecyclerView.LayoutManager 
                     cacheItemRect(index, childWidth, childHeight);
                     lineCount++;
                 } else {//换页
+                    //每一页循环以后就回收一页的View用于下一页的使用
+                    removeAndRecycleAllViews(recycler);
                     lineCount = 1;
                     pageSize++;
                     itemWidthUsed = getPaddingLeft();
                     itemHeightUsed = getPaddingTop();
                     cacheItemRect(index, childWidth, childHeight);
-                    //每一页循环以后就回收一页的View用于下一页的使用
-                    removeAndRecycleAllViews(recycler);
                 }
             }
+            //回收最后一页
+            removeAndRecycleAllViews(recycler);
         }
         totalWidth = (pageSize) * getWidth();
 
