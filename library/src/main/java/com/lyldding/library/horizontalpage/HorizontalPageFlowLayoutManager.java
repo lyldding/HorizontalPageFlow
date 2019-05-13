@@ -153,9 +153,9 @@ public class HorizontalPageFlowLayoutManager extends RecyclerView.LayoutManager 
                     cacheItemRect(index, childWidth, childHeight);
                 }
             }
-            //回收最后一页
-            removeAndRecycleAllViews(recycler);
         }
+        //回收最后一页
+        removeAndRecycleAllViews(recycler);
         totalWidth = (pageSize) * getWidth();
 
         recycleAndFillItems(recycler, state);
